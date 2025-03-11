@@ -10,7 +10,7 @@ exports.adminRole = (req, res, next) => {
         if (role == process.env.Admin) {
             next();                
         } else {
-            return res.status(401).json({ message: 'Você não tem permissão para realizar esta ação!' });
+            return res.status(401).json({ message: ' ' });
         }
     } catch (error) {
         return res.status(500).json({ message: 'Error ...' });

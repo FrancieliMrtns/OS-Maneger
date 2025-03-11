@@ -1,6 +1,6 @@
 const app = require('./app');
-const debug = require('debug')('node:server');
-const http = require('http');
+const debug = require('debug')('node:server'); 
+const http = require('http'); 
 
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
@@ -8,6 +8,7 @@ app.set('port', port);
 const server = http.createServer(app);
 
 server.listen(port);
+
 server.on('error', onError);
 server.on('listening', onListening);
 console.log(`Servidor rodando na porta ${port} ...`);

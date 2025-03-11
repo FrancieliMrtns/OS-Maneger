@@ -12,7 +12,7 @@ router.get('/tecnico', login.verifyToken, roles.adminRole, userController.userGe
 
 router.get('/:id', login.verifyToken, roles.adminRole, userController.userGetById);
 
-router.post('/create', login.verifyToken, roles.adminRole, userController.userCreate);
+router.post('/create', userController.userCreate);
 
 router.post('/login', userController.userLogin);
 
